@@ -58,7 +58,7 @@ def install_font():
             font_log(file)
             stat_f = os.stat(file)
             colorize(
-                "\nMoving {} to directory ~/.fonts...".format(file), color="blue")
+                "\nMoving {} to directory ~/.fonts".format(file), color="blue")
             colorize("[{:.2f} KB]".format(
                 stat_f.st_size / 1000), color="blue")
     colorize("\n[DONE]\n", color="green")
