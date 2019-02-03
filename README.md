@@ -13,15 +13,15 @@ chmod +x pyfont.py
 Para utilizar o script você deve visitar o site [dafont.com](www.dafont.com), escolher sua fonte e
 copiar o link do botão de download, conforme a imagem abaixo:
 
-![Print](https://imgur.com/RB1tehR)
+![Print](https://i.imgur.com/RB1tehR.png)
 
 E no terminal executar o script, colando o link copiado:
 
 ```
-python3 pyfont.py <font_link>
+python3 pyfont.py https://dl.dafont.com/dl/?f=north_roksy
 ```
 Ou caso modifique as permissões do script:
 
 ```
-./pyfont <font_link>
+./pyfont https://dl.dafont.com/dl/?f=north_roksy
 ```
