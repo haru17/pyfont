@@ -1,5 +1,5 @@
 # Pyfont 0.1
-Script feito em Python3 para baixar e instalar fontes do site [dafont.com](www.dafont.com) nos sistemas Linux.
+Script feito em Python3 para baixar e instalar fontes do site [dafont.com](https://www.dafont.com/) nos sistemas Linux.
 
 ## Instalação
 Para instalar, basta clonar ou baixar este repositório. E em seguida executar o arquivo pyfont.py
@@ -10,7 +10,7 @@ chmod +x pyfont.py
 ```
 
 ## Uso
-Para utilizar o script você deve visitar o site [dafont.com](www.dafont.com), escolher sua fonte e
+Para utilizar o script você deve visitar o site [dafont.com](https://www.dafont.com/), escolher sua fonte e
 copiar o link do botão de download, conforme a imagem abaixo:
 
 ![Print](https://i.imgur.com/RB1tehR.png)
