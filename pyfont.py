@@ -7,6 +7,7 @@ import requests
 from sys import argv
 from re import search
 from colors import colorize
+from time import ctime
 
 HELP = """
 Try to access the dafont website and copy the download link
@@ -54,6 +55,7 @@ def install_font():
         if search(REGEX_TYPE_FONT, file):
             cmd = "cp '{}' ~/.fonts 2> /dev/null".format(file)
             os.system(cmd)
+            font_log(file)
             stat_f = os.stat(file)
             colorize(
                 "\nMoving {} to directory ~/.fonts...".format(file), color="blue")
@@ -70,8 +72,16 @@ def delete_temp():
 
 
 def font_log(font_name):
-    pass
+    os.chdir('..')
+    if "font_list.txt" not in os.listdir():
+        f = open("font_list.txt", "w")
+        f.write("Lista de fontes instaladas no diretório ~/.fonts:\n")
+        f.close()
 
+    f = open("font_list.txt", "a")
+    f.write("{}\t{}\n".format(ctime(), font_name))
+    f.close()
+    os.chdir('font_dir')
 
 try:
     URL_TO_DOWNLOAD = argv[1]
