@@ -1,6 +1,7 @@
 # Author: José Almir
 
 colors = {
+    "no_color": "0m",
     "black": "30m",
     "red": "31m",
     "green": "32m",
@@ -12,6 +13,7 @@ colors = {
 }
 
 backgrounds = {
+    "no_bg": "0",
     "black": "40",
     "red": "41",
     "green": "42",
@@ -29,7 +31,7 @@ styles = {
 }
 
 
-def colorize(string, color="white", background="black", style="bold"):
+def colorize(string, color="white", background="no_bg", style="original"):
     print("\033[{};{};{}{}\033[0;0m".format(backgrounds[
           background], styles[style], colors[color], string))
 
