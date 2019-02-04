@@ -25,3 +25,6 @@ Ou caso modifique as permissões do script:
 ```
 ./pyfont https://dl.dafont.com/dl/?f=north_roksy
 ```
+
+Obs: Caso seu terminal possua suporte para arraste, 
+você só precisa arrastar o botão de download para ele.
