@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from webbrowser import open as open_browser
 import os
 import zipfile
 import requests
@@ -41,8 +40,7 @@ def extraction_from_zip():
         fzip.extractall('font_dir')
         fzip.close()
     except zipfile.BadZipfile:
-        print("There was an error in the download file. " +
-              "\nPlease check the font on the site, or try again.")
+        colorize("\nThere was an error in the download file.", color="red")
         os.remove('font_file.zip')
         exit()
 
@@ -85,7 +83,7 @@ def font_log(font_name):
 
 try:
     URL_TO_DOWNLOAD = argv[1]
-    colorize("\t\tPYFONT 0.1", background="red")
+    colorize("\t\t\tPYFONT 0.1\t\t\t", background="red")
     validate_url(URL_TO_DOWNLOAD)
     download_from_dafont(URL_TO_DOWNLOAD)
     extraction_from_zip()
@@ -98,6 +96,5 @@ except IndexError:
 except ValueError:
     colorize("\nError. Invalid URL passed to script.", color="red")
     colorize(HELP, color="green")
-    colorize("\nOpening default browser...\n", color="blue")
-    os.system('sleep 2')
-    open_browser('www.dafont.com')
+    colorize("\nGo to dafont.com and choose a font.\n", color="blue")
+    
